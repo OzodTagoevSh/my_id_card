@@ -34,8 +34,46 @@ class MyCard extends StatelessWidget {
               'Ozod Tagoev',
               style: TextStyle(
                 color: Colors.amberAccent,
-                letterSpacing: 1.0
+                letterSpacing: 2.0,
+                fontSize: 28.0,
+                fontWeight: FontWeight.bold,
               ),
+            ),
+            SizedBox(height: 30.0,),
+            Text(
+              'UNIVERSITY ID',
+              style: TextStyle(
+                color: Colors.grey[400],
+                letterSpacing: 2.0,
+              ),
+            ),
+            SizedBox(height: 10.0,),
+            Text(
+              'U1710010',
+              style: TextStyle(
+                color: Colors.amberAccent,
+                letterSpacing: 2.0,
+                fontSize: 28.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 30.0,),
+            Row(
+              children: [
+                Icon(
+                  Icons.mail,
+                  color: Colors.grey[400],
+                ),
+                SizedBox(width: 10.0,),
+                Text(
+                  'o.tagoev@student.inha.uz',
+                  style: TextStyle(
+                    color: Colors.grey[400],
+                    letterSpacing: 1.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
             ),
           ],
         ),
