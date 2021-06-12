@@ -28,6 +28,10 @@ class MyCard extends StatelessWidget {
                 radius: 50.0,
               ),
             ),
+            Divider(
+              height: 90.0,
+              color: Colors.grey[400],
+            ),
             Text(
               'NAME',
               style: TextStyle(
