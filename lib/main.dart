@@ -1,11 +1,20 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
+  debugShowCheckedModeBanner: false,
   home: MyCard(),
 ));
 
-class MyCard extends StatelessWidget {
+class MyCard extends StatefulWidget {
   const MyCard({Key? key}) : super(key: key);
+
+  @override
+  _MyCardState createState() => _MyCardState();
+}
+
+class _MyCardState extends State<MyCard> {
+
+  int myLevel = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +25,15 @@ class MyCard extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.grey[800],
         elevation: 0.0,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            myLevel++;
+          });
+        },
+        child: Icon(Icons.add),
+        backgroundColor: Colors.grey[800],
       ),
       body: Padding(
         padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
@@ -84,6 +102,24 @@ class MyCard extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+            SizedBox(height: 30.0,),
+            Text(
+              'MY LEVEL',
+              style: TextStyle(
+                color: Colors.grey[400],
+                letterSpacing: 2.0,
+              ),
+            ),
+            SizedBox(height: 10.0,),
+            Text(
+              '$myLevel',
+              style: TextStyle(
+                color: Colors.amberAccent,
+                letterSpacing: 2.0,
+                fontSize: 28.0,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ],
         ),
